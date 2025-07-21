@@ -1,0 +1,43 @@
+name: Enforce Acceptance Criteria Checklist
+
+on:
+  issues:
+    types: [closed]
+
+permissions:
+  issues: write
+
+jobs:
+  enforce_acceptance_criteria:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Check Acceptance Criteria Checkboxes
+      uses: actions/github-script@v7
+      with:
+        script: |
+          const issue = context.payload.issue;
+          const body = issue.body;
+          const issue_number = issue.number;
+          
+          const match = body.match(/#+\s*✅?\s*Acceptance Criteria\s*\n+([\s\S]+?)(\n#+|\n*$)/i);
+          
+          if (match && match[1]) {
+            const criteriaSection = match[1];
+            const unchecked = criteriaSection.match(/- \[ \]/g);
+          
+            if (unchecked && unchecked.length > 0) {
+              await github.rest.issues.update({
+                ...context.repo,
+                issue_number,
+                state: 'open'
+              });
+          
+              await github.rest.issues.createComment({
+                ...context.repo,
+                issue_number,
+                body: `❌ This issue still has ${unchecked.length} unchecked acceptance criteria.\n\nPlease complete all acceptance items before closing.`
+              });
+          
+              console.log(`Reopened issue #${issue_number} due to unchecked boxes.`);
+            }
+          }
