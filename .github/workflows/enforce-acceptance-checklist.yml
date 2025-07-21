@@ -18,8 +18,17 @@ jobs:
           const issue = context.payload.issue;
           const body = issue.body;
           const issue_number = issue.number;
+          const labels = issue.labels.map(l => l.name.toLowerCase());
+  
+          const skipReasons = ['duplicate', 'wontfix', 'not planned', 'invalid'];
+          const shouldSkip = labels.some(l => skipReasons.includes(l));
           
           const match = body.match(/#+\s*✅?\s*Acceptance Criteria\s*\n+([\s\S]+?)(\n#+|\n*$)/i);
+          
+          if (shouldSkip) {
+            console.log(`Skipping checklist check due to label(s): ${labels.join(', ')}`);
+            return;
+          }
           
           if (match && match[1]) {
             const criteriaSection = match[1];
