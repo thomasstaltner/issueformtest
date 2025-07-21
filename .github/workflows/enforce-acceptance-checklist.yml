@@ -41,7 +41,8 @@ jobs:
           const match = body.match(/#+\s*✅?\s*Acceptance Criteria\s*\n+([\s\S]+?)(\n#+|\n*$)/i);
           
           if (shouldSkip) {
-            console.log(`Skipping checklist check due to label(s): ${labels.join(', ')}`);
+            console.log(`✅ Skipping checklist check due to label(s): ${labels.join(', ')}`);
+            console.log(`💡 If this is on purpose, label the issue with one of: ${skipReasons.join(', ')}`);
             return;
           }
           
