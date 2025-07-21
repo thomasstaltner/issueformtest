@@ -41,8 +41,7 @@ jobs:
           const match = body.match(/#+\s*✅?\s*Acceptance Criteria\s*\n+([\s\S]+?)(\n#+|\n*$)/i);
           
           if (shouldSkip) {
-            console.log(`✅ Skipping checklist check due to label(s): ${labels.join(', ')}`);
-            console.log(`💡 If this is on purpose, label the issue with one of: ${skipReasons.join(', ')}`);
+            console.log(`Skipping checklist check due to label(s): ${labels.join(', ')}`);
             return;
           }
           
@@ -62,7 +61,7 @@ jobs:
               await github.rest.issues.createComment({
                 ...context.repo,
                 issue_number,
-                body: `❌ This issue still has ${unchecked.length} unchecked acceptance criteria.\n\nPlease complete all acceptance items before closing.`
+                body: `❌ This issue still has ${unchecked.length} unchecked acceptance criteria.\n\nPlease ensure all tasks are completed before closing.\n\n💡 If this issue is being closed intentionally (e.g., as duplicate or not planned), consider adding a label such as: ${skipReasons.join(', ')}.`
               });
           
               console.log(`Reopened issue #${issue_number} due to unchecked boxes.`);
