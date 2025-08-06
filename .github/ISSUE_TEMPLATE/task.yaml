@@ -1,7 +1,7 @@
 name: Task
 description: A small, actionable unit of work.
 title: "[Task]: "
-labels: ["task"]
+labels: ["enhancement"]
 # projects: ["octo-org/1", "octo-org/44"]
 #assignees:
 #  - octocat
@@ -14,7 +14,7 @@ body:
   - type: textarea
     id: related
     attributes:
-      label: 🔗 Related Feature
+      label: 🔗 Related Issues
       description: "Link to the related feature or issue (e.g. #42)"
       placeholder: |
         depends-on: #42
