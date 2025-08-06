@@ -11,4 +11,4 @@ issue_templates:
 
   - name: Task
     description: A small, actionable unit of work.
-    file: feature.yaml
+    file: task.yaml
