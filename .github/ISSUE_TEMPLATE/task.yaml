@@ -1,0 +1,29 @@
+name: Task
+description: A small, actionable unit of work.
+title: "[Task]: "
+labels: ["task"]
+# projects: ["octo-org/1", "octo-org/44"]
+#assignees:
+#  - octocat
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ### 🛠️ Task  
+        Use this template to track a small development task.
+  - type: textarea
+    id: related
+    attributes:
+      label: 🔗 Related Feature
+      description: "Link to the related feature or issue (e.g. #42)"
+      placeholder: "#42"
+    validations:
+      required: false
+  - type: textarea
+    id: objective
+    attributes:
+      label: 🎯 Objective
+      description: "What should this task accomplish?"
+      placeholder: "Implement scan logic to detect Modbus devices on the bus"
+    validations:
+      required: true
