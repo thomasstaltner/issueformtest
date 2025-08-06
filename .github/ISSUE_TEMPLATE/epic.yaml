@@ -1,8 +1,8 @@
 name: Epic
 description: A large initiative composed of smaller features and tasks.
 title: "[EPIC] Descriptive title here"
-labels:
-  - "type: epic"
+type: epic
+#  - "type: epic"
 # assignees: []
 
 body:
@@ -21,6 +21,17 @@ body:
       placeholder: "As a platform engineer, I want unified configuration loading so that Modbus devices are easier to support."
     validations:
       required: true
+
+  - type: textarea
+    id: precondition
+    attributes:
+      label: 🧩 Precondition
+      description: "Define what must be finished before this epic can be started. Use '- [ ]' for each item."
+      placeholder: |
+        - [ ] #0
+        - [ ] #208
+    validations:
+      required: false
 
   - type: textarea
     id: summary

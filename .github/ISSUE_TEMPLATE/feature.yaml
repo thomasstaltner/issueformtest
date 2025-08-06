@@ -22,6 +22,17 @@ body:
       required: true
 
   - type: textarea
+    id: precondition
+    attributes:
+      label: 🧩 Precondition
+      description: "Define what must be finished before this epic can be started. Use '- [ ]' for each item."
+      placeholder: |
+        - [ ] #0
+        - [ ] #208
+    validations:
+      required: false
+
+  - type: textarea
     id: summary
     attributes:
       label: 📝 Summary
