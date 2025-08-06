@@ -2,8 +2,8 @@ name: Task
 description: A small, actionable unit of work.
 title: "[Task]: "
 labels: ["enhancement"]
-type: Task
-projects: ["test - project"]
+#type: Task
+#projects: ["test - project"]
 #assignees:
 #  - octocat
 body:
