@@ -12,7 +12,7 @@ body:
         ## ✨ Feature Request  
         Please fill out the form to describe the feature you are requesting.
 
-  - type: input
+  - type: textarea
     id: user-story
     attributes:
       label: 🧑‍💼 User Story

@@ -13,7 +13,7 @@ body:
         Please describe the larger initiative and how it breaks down into sub-tasks and features.  
         **Note:** All epic completion criteria must be fulfilled before closure.
 
-  - type: input
+  - type: textarea
     id: user-story
     attributes:
       label: 🧑‍💼 User Story
