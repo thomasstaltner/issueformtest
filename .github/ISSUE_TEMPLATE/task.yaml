@@ -16,7 +16,9 @@ body:
     attributes:
       label: 🔗 Related Feature
       description: "Link to the related feature or issue (e.g. #42)"
-      placeholder: "#42"
+      placeholder: |
+        depends-on: #42
+        relates-to: #41
     validations:
       required: false
   - type: textarea
