@@ -1,9 +1,9 @@
 name: Feature Request
 description: Suggest a new feature or enhancement
 title: "[FEATURE] Descriptive title here"
+type: feature
 labels:
-  - "type: feature"
-# assignees: []
+  - feature
 
 body:
   - type: markdown
@@ -19,7 +19,7 @@ body:
       description: "Format: As a [type of user], I want [action] so that [value]."
       placeholder: "As a device integrator, I want to auto-detect Modbus devices so that I don’t need to configure each manually."
     validations:
-      required: true
+      required: false
 
   - type: textarea
     id: precondition
@@ -51,7 +51,7 @@ body:
         - Update device registry model
         - Add UI support
     validations:
-      required: true
+      required: false
 
   - type: textarea
     id: criteria
@@ -63,7 +63,7 @@ body:
         - [ ] Manual override remains possible
         - [ ] Passes integration tests
     validations:
-      required: true
+      required: false
 
   - type: textarea
     id: notes

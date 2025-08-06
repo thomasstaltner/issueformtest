@@ -2,8 +2,6 @@ name: Epic
 description: A large initiative composed of smaller features and tasks.
 title: "[EPIC] Descriptive title here"
 type: epic
-#  - "type: epic"
-# assignees: []
 
 body:
   - type: markdown
@@ -20,7 +18,7 @@ body:
       description: "Format: As a [type of user], I want [action] so that [value]."
       placeholder: "As a platform engineer, I want unified configuration loading so that Modbus devices are easier to support."
     validations:
-      required: true
+      required: false
 
   - type: textarea
     id: precondition
@@ -52,7 +50,7 @@ body:
         - Enable live reconfiguration via YAML
         - Consolidate register parsing logic
     validations:
-      required: true
+      required: false
 
   - type: textarea
     id: criteria
@@ -61,10 +59,9 @@ body:
       description: "Define what must be true for this epic to be considered complete. Use '- [ ]' for each item."
       placeholder: |
         - [ ] All related issues are closed
-        - [ ] QA has verified across all supported devices
         - [ ] End-user documentation is available
     validations:
-      required: true
+      required: false
 
   - type: textarea
     id: notes
