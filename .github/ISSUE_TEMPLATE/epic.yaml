@@ -54,7 +54,7 @@ body:
     validations:
       required: false
 
-  - type: textarea
+  - type: input
     id: criteria
     attributes:
       label: ✅ Acceptance Criteria
