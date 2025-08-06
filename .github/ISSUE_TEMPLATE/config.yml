@@ -1,14 +1,14 @@
-# blank_issues_enabled: false
+blank_issues_enabled: false
 
-issue_templates:
-  - name: Epic
-    description: A large initiative composed of smaller features and tasks.
-    file: epic.yaml
-
-  - name: Feature
-    description: A new feature or enhancement.
-    file: feature.yaml
-
-  - name: Task
-    description: A small, actionable unit of work.
-    file: task.yaml
+#issue_templates:
+#  - name: Epic
+#    description: A large initiative composed of smaller features and tasks.
+#    file: epic.yaml
+#
+#  - name: Feature
+#    description: A new feature or enhancement.
+#    file: feature.yaml
+#
+#  - name: Task
+#    description: A small, actionable unit of work.
+#    file: task.yaml
