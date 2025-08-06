@@ -22,13 +22,13 @@ body:
       required: false
 
   - type: textarea
-    id: precondition
+    id: related-issues
     attributes:
-      label: 🧩 Precondition
-      description: "Define what must be finished before this epic can be started. Use '- [ ]' for each item."
+      label: 🔗 Related Issues
+      description: "Link to the related feature or issue (e.g. #42)"
       placeholder: |
-        - [ ] #0
-        - [ ] #208
+        depends-on: #42
+        relates-to: #41
     validations:
       required: false
 

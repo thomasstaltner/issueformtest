@@ -11,8 +11,9 @@ body:
       value: |
         ### 🛠️ Task  
         Use this template to track a small development task.
+
   - type: textarea
-    id: related
+    id: related-issues
     attributes:
       label: 🔗 Related Issues
       description: "Link to the related feature or issue (e.g. #42)"
@@ -21,6 +22,7 @@ body:
         relates-to: #41
     validations:
       required: false
+
   - type: textarea
     id: objective
     attributes:
