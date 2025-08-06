@@ -12,12 +12,12 @@ body:
         ## ✨ Feature Request  
         Please fill out the form to describe the feature you are requesting.
 
-  - type: textarea
+  - type: input
     id: user-story
     attributes:
       label: 🧑‍💼 User Story
       description: "Format: As a [type of user], I want [action] so that [value]."
-      placeholder: "As a device integrator, I want to auto-detect Modbus devices so that I don’t need to configure each manually."
+      placeholder: "As a platform engineer, I want unified configuration loading so that Modbus devices are easier to support."
     validations:
       required: false
 
