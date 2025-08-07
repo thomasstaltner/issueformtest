@@ -3,9 +3,8 @@ description: A small, actionable unit of work.
 title: "[Task]: "
 labels: ["enhancement"]
 #type: Task
-projects: ["thomasstaltner/projects/1"]
-#assignees:
-#  - octocat
+#projects: ["thomasstaltner/projects/1", "eclipse-energy/projects/7"]
+#assignees: <-- set via workflow action
 body:
   - type: markdown
     attributes:
