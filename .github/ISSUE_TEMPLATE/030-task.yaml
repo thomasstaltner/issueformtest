@@ -3,7 +3,7 @@ description: A small, actionable unit of work.
 title: "[Task]: "
 labels: ["enhancement"]
 #type: Task
-projects: ["1"]
+projects: ["projects/1"]
 #assignees:
 #  - octocat
 body:
